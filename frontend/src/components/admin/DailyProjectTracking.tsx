@@ -34,8 +34,7 @@ const DailyProjectTracking = () => {
 
     const fetchData = async () => {
         try {
-            const res = await axios.get("https://sindhanai-sirpi-hackathon-1.onrender.com
-/api/admin/getTrackingByDate"); // adjust URL
+            const res = await axios.get("https://sindhanai-sirpi-hackathon-1.onrender.com/api/admin/getTrackingByDate"); // adjust URL
             setProjects(res.data);
         } catch (err) {
             console.error("Failed to fetch projects", err);
