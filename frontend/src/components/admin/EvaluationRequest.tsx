@@ -47,8 +47,7 @@ const EvaluationRequest = () => {
 
     const fetchEvaluatorsList = async () => {
         try {
-            const res = await axios.get('https://sindhanai-sirpi-hackathon-1.onrender.com
-/api/admin/get-evaluators');
+            const res = await axios.get('https://sindhanai-sirpi-hackathon-1.onrender.com/api/admin/get-evaluators');
             setEvaluatorList(res.data);
         } catch (err) {
             console.error('Error fetching evaluators:', err);
@@ -57,8 +56,7 @@ const EvaluationRequest = () => {
 
     const fetchEvaluators = async (status: 'pending' | 'get-evaluators') => {
         try {
-            const res = await axios.get(`https://sindhanai-sirpi-hackathon-1.onrender.com
-/api/evaluator/${status}`, {
+            const res = await axios.get(`https://sindhanai-sirpi-hackathon-1.onrender.com/api/evaluator/${status}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             if (status === 'pending') {
@@ -85,8 +83,7 @@ const EvaluationRequest = () => {
 
     const handleStatusChange = async (id: string, status: 'approved' | 'rejected') => {
         try {
-            await axios.put(`https://sindhanai-sirpi-hackathon-1.onrender.com
-/api/evaluator/${status}/${id}`, {}, {
+            await axios.put(`https://sindhanai-sirpi-hackathon-1.onrender.com/api/evaluator/${status}/${id}`, {}, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             toast.success(`Evaluator ${status}`);
@@ -107,8 +104,7 @@ const EvaluationRequest = () => {
     const handleSave = async (index: number) => {
         const evaluator = editableList[index];
         try {
-            await axios.put(`https://sindhanai-sirpi-hackathon-1.onrender.com
-/api/admin/evaluators/${evaluator._id}`, evaluator, {
+            await axios.put(`https://sindhanai-sirpi-hackathon-1.onrender.com/api/admin/evaluators/${evaluator._id}`, evaluator, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             toast.success('Evaluator updated');
@@ -122,8 +118,7 @@ const EvaluationRequest = () => {
     const handleRejectApproved = async (index: number) => {
         const evaluator = editableList[index];
         try {
-            await axios.put(`https://sindhanai-sirpi-hackathon-1.onrender.com
-/api/admin/evaluators/${evaluator._id}`, { ...evaluator, status: 'rejected' }, {
+            await axios.put(`https://sindhanai-sirpi-hackathon-1.onrender.com/api/admin/evaluators/${evaluator._id}`, { ...evaluator, status: 'rejected' }, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             toast.success('Evaluator marked as rejected');
