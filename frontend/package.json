@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://sindhanai-sirpi-hackathon-1.onrender.com
-",
+  "proxy": "https://sindhanai-sirpi-hackathon-1.onrender.com",
+  
 
   "scripts": {
     "dev": "vite",
