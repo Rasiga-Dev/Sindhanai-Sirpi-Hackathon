@@ -13,7 +13,8 @@ const ProjectDetailModal = ({ project, onClose }) => {
 
     useEffect(() => {
         axios
-            .get(`https://sindhanai-sirpi-hackathon.onrender.com/api/admin/project/${project.schoolId}/${project.index}`)
+            .get(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/project/${project.schoolId}/${project.index}`)
             .then((res) => {
                
                 setDetails(res.data);

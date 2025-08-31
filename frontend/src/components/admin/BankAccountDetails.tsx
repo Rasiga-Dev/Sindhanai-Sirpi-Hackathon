@@ -23,7 +23,8 @@ const BankAccountDetails = ({ id }) => {
     // ✅ Fetch already submitted details on mount
     const fetchBankDetails = async () => {
       try {
-        const res = await axios.get(`https://sindhanai-sirpi-hackathon.onrender.com
+        const res = await axios.get(`https://sindhanai-sirpi-hackathon-1.onrender.com
+
 /api/schools/getBank/${id}`);
         if (res.data?.status === "bankDetailsUpdated") {
           setSubmitted(true); // Already submitted, show message
@@ -60,7 +61,8 @@ const BankAccountDetails = ({ id }) => {
         }
       });
 
-      await axios.put(`https://sindhanai-sirpi-hackathon.onrender.com/api/schools/updateBank/${id}`, data, {
+      await axios.put(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/schools/updateBank/${id}`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

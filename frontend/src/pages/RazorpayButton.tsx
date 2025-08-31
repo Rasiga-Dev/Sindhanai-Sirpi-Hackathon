@@ -13,7 +13,8 @@ const RazorpayButton = () => {
     return;
   }
 
-  const response = await fetch("https://sindhanai-sirpi-hackathon.onrender.com/api/payment/payment", {
+  const response = await fetch("https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/payment/payment", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -32,7 +33,8 @@ const RazorpayButton = () => {
     order_id: data.id,
     handler: async function (response) {
       // ✅ Razorpay payment success
-      const verifyRes = await fetch("https://sindhanai-sirpi-hackathon.onrender.com/api/payment/verify", {
+      const verifyRes = await fetch("https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/payment/verify", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

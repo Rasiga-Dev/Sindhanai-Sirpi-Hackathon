@@ -14,7 +14,8 @@ const DPMLogin = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/dpm/login', {
+      const res = await axios.post('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/dpm/login', {
         username,
         password,
       });

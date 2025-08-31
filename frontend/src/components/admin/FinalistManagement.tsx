@@ -41,7 +41,8 @@ const FinalistManagement = () => {
 
     const fetchFinalists = async () => {
         try {
-            const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com/api/admin/top-finalists");
+            const res = await axios.get("https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/top-finalists");
             setFinalists(res.data);
             setLoading(false);
             console.log("Finalists fetched:", res.data);
@@ -53,7 +54,8 @@ const FinalistManagement = () => {
 
     const handleNotify = async (project: Finalist) => {
         try {
-            await axios.post(`https://sindhanai-sirpi-hackathon.onrender.com/api/admin/notify-finalist/${project.projectId}`);
+            await axios.post(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/notify-finalist/${project.projectId}`);
             alert(`Notification sent to ${project.schoolName} successfully!`);
         } catch (error) {
             console.error("Notification Error:", error);
@@ -248,7 +250,8 @@ const FinalistManagement = () => {
                                         onClick={async () => {
                                             if (!selectedProject || selectedRank === null) return;
                                             try {
-                                                await axios.post(`https://sindhanai-sirpi-hackathon.onrender.com/api/admin/accept-finalist/${selectedProject.projectId}`, {
+                                                await axios.post(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/accept-finalist/${selectedProject.projectId}`, {
                                                     rank: selectedRank,
                                                     finalStatus: "Finalist",
                                                 });

@@ -15,7 +15,8 @@ const EvaluatorManagement = () => {
   useEffect(() => {
     const fetchEvaluators = async () => {
       try {
-        const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com/api/admin/get-all-evaluators");
+        const res = await axios.get("https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/get-all-evaluators");
         setEvaluators(res.data);
       } catch (err) {
         console.error("Error fetching evaluators:", err);
@@ -29,7 +30,8 @@ const EvaluatorManagement = () => {
     setOpen(true); // ✅ open modal
     try {
       const res = await axios.get(
-        `https://sindhanai-sirpi-hackathon.onrender.com/api/admin/${evaluator.username}/projects`
+        `https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/${evaluator.username}/projects`
       );
       setAssignedProjects(res.data.assignedProjects);
       setEvaluatedProjects(res.data.evaluatedProjects);

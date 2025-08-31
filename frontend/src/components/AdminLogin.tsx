@@ -16,7 +16,8 @@ export default function AdminLogin() {
     setIsLoading(true);
     setError('');
     try {
-      const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/admin/login', credentials);
+      const response = await axios.post('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/login', credentials);
       localStorage.setItem('adminToken', response.data.token);
       navigate('/admin-dashboard');
     } catch (err: any) {

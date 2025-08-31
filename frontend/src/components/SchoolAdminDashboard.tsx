@@ -124,10 +124,12 @@ const [showBMC, setShowBMC] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const schoolRes = await axios.get(`https://sindhanai-sirpi-hackathon.onrender.com/api/schools/${id}`);
+        const schoolRes = await axios.get(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/schools/${id}`);
         setSchool(schoolRes.data);
 
-        const dashboardRes = await axios.get(`https://sindhanai-sirpi-hackathon.onrender.com/api/admin/summary/${id}`);
+        const dashboardRes = await axios.get(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/summary/${id}`);
         setDashboardData(dashboardRes.data);
        
 

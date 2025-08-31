@@ -17,7 +17,8 @@ const reports: ReportItem[] = [
 const ReportsExport: React.FC = () => {
   const handleDownload = async (path: string) => {
     try {
-      const response = await axios.get(`https://sindhanai-sirpi-hackathon.onrender.com/api/admin/${path}`, {
+      const response = await axios.get(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/${path}`, {
         responseType: 'blob',
       });
 

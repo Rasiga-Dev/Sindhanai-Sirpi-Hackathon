@@ -92,7 +92,8 @@ const IdeaSubmissionForm: React.FC = () => {
       const token = localStorage.getItem('schoolToken');
 
       await axios.post(
-        'https://sindhanai-sirpi-hackathon.onrender.com/api/schools/drafts',
+        'https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/schools/drafts',
         {
           udiseCode,
           ...data
@@ -115,7 +116,8 @@ const IdeaSubmissionForm: React.FC = () => {
       const token = localStorage.getItem('schoolToken');
 
       const response = await axios.get(
-        `https://sindhanai-sirpi-hackathon.onrender.com/api/schools/drafts/${udiseCode}`,
+        `https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/schools/drafts/${udiseCode}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -145,7 +147,8 @@ const IdeaSubmissionForm: React.FC = () => {
         return;
       }
 
-      const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com/api/school/get-registered-guide-teachers', {
+      const response = await axios.get('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/school/get-registered-guide-teachers', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -214,7 +217,8 @@ const IdeaSubmissionForm: React.FC = () => {
       formData.append('transactionId', transactionId);
 
       const response = await axios.post(
-        'https://sindhanai-sirpi-hackathon.onrender.com/api/schools/submit-idea',
+        'https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/schools/submit-idea',
         formData,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );
@@ -222,7 +226,8 @@ const IdeaSubmissionForm: React.FC = () => {
       // Delete draft after successful submission
       const token = localStorage.getItem('schoolToken');
       await axios.delete(
-        `https://sindhanai-sirpi-hackathon.onrender.com/api/schools/drafts/${parsedSchoolDetails.udiseCode}`,
+        `https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/schools/drafts/${parsedSchoolDetails.udiseCode}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

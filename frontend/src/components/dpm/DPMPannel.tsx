@@ -15,7 +15,8 @@ const DPMPannel = () => {
 
   useEffect(() => {
     if (district && activeTab === 'school') {
-      axios.get(`https://sindhanai-sirpi-hackathon.onrender.com/api/dpm/schools/by-district/${district}`)
+      axios.get(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/dpm/schools/by-district/${district}`)
         .then((res) => {
           setSchools(res.data);
         })
@@ -26,7 +27,8 @@ const DPMPannel = () => {
 
 
     if (district && activeTab === 'evaluator') {
-      axios.get(`https://sindhanai-sirpi-hackathon.onrender.com/api/dpm/by-district/${district}`)
+      axios.get(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/dpm/by-district/${district}`)
         .then((res) => setEvaluators(res.data));
     }
   }, [district, activeTab]);

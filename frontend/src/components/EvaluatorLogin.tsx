@@ -19,7 +19,8 @@ export default function EvaluatorLogin() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/evaluator/login', credentials);
+      const response = await axios.post('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/evaluator/login', credentials);
       const evaluator = response.data.evaluator;
 
       localStorage.setItem('evaluatorToken', response.data.token);

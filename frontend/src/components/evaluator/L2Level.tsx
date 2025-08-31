@@ -60,7 +60,8 @@ export default function L2Level({ projects, username, refreshProjects, refreshLe
 
       const token = localStorage.getItem('evaluatorToken');
 
-      const response = await axios.post(`https://sindhanai-sirpi-hackathon.onrender.com/api/evaluator/submit-score`, {
+      const response = await axios.post(`https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/evaluator/submit-score`, {
         schoolId: project.schoolId,
         projectId: project.projectId,
         evaluatorName: username,
@@ -112,7 +113,8 @@ export default function L2Level({ projects, username, refreshProjects, refreshLe
     setIsLoading(true);
     try {
       const token = localStorage.getItem('evaluatorToken');
-      const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com/api/evaluator/level-2-summary', {
+      const response = await axios.get('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/evaluator/level-2-summary', {
         headers: { Authorization: `Bearer ${token}` },
       });
 

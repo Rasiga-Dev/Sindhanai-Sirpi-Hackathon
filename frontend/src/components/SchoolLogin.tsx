@@ -21,7 +21,8 @@ export function SchoolLogin() {
     setIsLoading(true);
 
     try {
-      const res = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/schools/login', {
+      const res = await axios.post('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/schools/login', {
         udiseCode,
         password,
       });

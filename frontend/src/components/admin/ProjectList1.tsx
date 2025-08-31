@@ -22,7 +22,8 @@ const ProjectList1 = () => {
 
 useEffect(() => {
   axios
-    .get("https://sindhanai-sirpi-hackathon.onrender.com/api/admin/all-projects")
+    .get("https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/all-projects")
     .then((res) => {
       
       setProjects(res.data); // Set data to state

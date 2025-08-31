@@ -16,7 +16,8 @@ export function ForgotPassword() {
     setError('');
 
     try {
-      const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/auth/forgot-password', { email });
+      const response = await axios.post('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/auth/forgot-password', { email });
       setSuccess(true);
       navigate('/verify-otp', { state: { email } });
     } catch (err: any) {

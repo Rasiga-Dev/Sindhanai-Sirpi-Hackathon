@@ -22,7 +22,8 @@
 //         setError(null);
 
 //         try {
-//             let url = `https://sindhanai-sirpi-hackathon.onrender.com/api/admin/schools?`;
+//             let url = `https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/schools?`;
 
 //             const params = [];
 //             if (districtFilter) params.push(`district=${districtFilter}`);
@@ -170,7 +171,8 @@ const SchoolManagement = () => {
         setLoading(true);
         setError(null);
         try {
-            let url = `https://sindhanai-sirpi-hackathon.onrender.com/api/admin/schools?`;
+            let url = `https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/schools?`;
             const params = [];
             if (districtFilter) params.push(`district=${districtFilter}`);
             if (statusFilter) params.push(`status=${statusFilter}`);

@@ -27,7 +27,8 @@ const DashboardHome = () => {
     setLoading(true);
     setError(null);
 
-    fetch('https://sindhanai-sirpi-hackathon.onrender.com/api/admin/dashboard-stats')
+    fetch('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/dashboard-stats')
       .then(async (res) => {
         if (!res.ok) {
           const errorData = await res.json();

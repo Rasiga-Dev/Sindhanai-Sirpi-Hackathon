@@ -16,7 +16,8 @@ const EvaluatorStage3Dashboard = () => {
     const fetchProjects = async () => {
         try {
             setLoading(true); // start loader
-            const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com/api/evaluator/getAcceptedEvaluatedProjects');
+            const response = await axios.get('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/evaluator/getAcceptedEvaluatedProjects');
             setProjects(response.data.data);
             setLoading(false); // stop loader
         } catch (error) {
@@ -32,7 +33,8 @@ const EvaluatorStage3Dashboard = () => {
     const handleSubmit = async (schoolId, projectId, status) => {
         try {
             setLoading(true);
-            const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/evaluator/update-winner', {
+            const response = await axios.post('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/evaluator/update-winner', {
                 schoolId,
                 projectId,
                 status

@@ -40,7 +40,8 @@ export default function EvaluatorRegister() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/evaluator/register', {
+      const response = await axios.post('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/evaluator/register', {
         username: formData.username,
         email: formData.email,
         phone: formData.phone,

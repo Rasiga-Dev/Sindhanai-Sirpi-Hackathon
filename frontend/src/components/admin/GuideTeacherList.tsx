@@ -23,7 +23,8 @@ const GuideTeacherList = () => {
     const fetchGuideTeachers = async () => {
       try {
         const res = await axios.get(
-          "https://sindhanai-sirpi-hackathon.onrender.com/api/admin/guide-teachers"
+          "https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/admin/guide-teachers"
         );
         setTeachers(res.data);
         console.log(res.data, " Guide Teachers Data");

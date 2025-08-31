@@ -46,7 +46,8 @@ const EvaluatorStage2Dashboard: React.FC = () => {
                     return;
                 }
 
-                const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com/api/evaluator/accepted-projects', {
+                const response = await axios.get('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/evaluator/accepted-projects', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
 
@@ -107,7 +108,8 @@ const EvaluatorStage2Dashboard: React.FC = () => {
             }
 
             await axios.post(
-                'https://sindhanai-sirpi-hackathon.onrender.com/api/evaluator/submit-score',
+                'https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/evaluator/submit-score',
                 {
                     projectId,
                     evaluatorName,

@@ -55,7 +55,8 @@ const RegisterGuideTeacher = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/school/register-guide-teacher', {
+      const response = await axios.post('https://sindhanai-sirpi-hackathon-1.onrender.com
+/api/school/register-guide-teacher', {
         teacherName,
         phoneNumber,
         email,
