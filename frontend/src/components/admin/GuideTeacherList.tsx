@@ -7,7 +7,8 @@
 // //   useEffect(() => {
 // //     const fetchGuideTeachers = async () => {
 // //       try {
-// //         const res = await axios.get('http://localhost:11129/api/admin/guide-teachers');
+// //         const res = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/guide-teachers');
 // //         setTeachers(res.data);
 // //       } catch (err) {
 // //         console.error('Error fetching guide teachers', err);
@@ -57,7 +58,8 @@
 //   useEffect(() => {
 //     const fetchGuideTeachers = async () => {
 //       try {
-//         const res = await axios.get('http://localhost:11129/api/admin/guide-teachers');
+//         const res = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/guide-teachers');
 //         setTeachers(res.data);
 //       } catch (err) {
 //         console.error('Error fetching guide teachers', err);
@@ -119,7 +121,8 @@
 //   useEffect(() => {
 //     const fetchGuideTeachers = async () => {
 //       try {
-//         const res = await axios.get('http://localhost:11129/api/admin/guide-teachers');
+//         const res = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/guide-teachers');
 //         setTeachers(res.data);
 //         setLoading(false);
 //       } catch (err) {
@@ -205,7 +208,8 @@ const GuideTeacherList = () => {
     const fetchGuideTeachers = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:11129/api/admin/guide-teachers"
+          "https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/guide-teachers"
         );
         setTeachers(res.data);
         console.log(res.data, " Guide Teachers Data");

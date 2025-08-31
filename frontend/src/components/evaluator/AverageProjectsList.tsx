@@ -34,7 +34,8 @@
 //   const fetchProjects = async () => {
 //     setIsLoading(true);
 //     try {
-//       const response = await axios.get('http://localhost:11129/api/evaluator/average-projects');
+//       const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/evaluator/average-projects');
 //       setProjects(response.data);
 //       console.log('Fetched average projects:', response.data);
 //     } catch (err) {
@@ -210,7 +211,8 @@ const AverageProjectsList = () => {
   const fetchProjects = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get('http://localhost:11129/api/evaluator/average-projects');
+      const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/evaluator/average-projects');
       setProjects(response.data);
     } catch (err) {
       console.error('Error fetching projects:', err);
@@ -226,7 +228,8 @@ const AverageProjectsList = () => {
     avg: string
   ) => {
     try {
-      await axios.put('http://localhost:11129/api/evaluator/update-evaluation-status', {
+      await axios.put('https://sindhanai-sirpi-hackathon.onrender.com
+/api/evaluator/update-evaluation-status', {
         schoolId,
         projectId,
         status,

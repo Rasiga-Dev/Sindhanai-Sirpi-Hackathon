@@ -24,7 +24,8 @@
 //     setIsLoading(true);
 //     try {
 //       const token = localStorage.getItem('evaluatorToken');
-//       const response = await axios.get('http://localhost:11129/api/evaluator/assigned-projects', {
+//       const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/evaluator/assigned-projects', {
 //         headers: { Authorization: `Bearer ${token}` }
 //       });
 //       console.log('Fetched L1 projects:', response.data); // ✅ fixed line
@@ -166,7 +167,8 @@ export default function EvaluatorDashboard() {
     setIsLoading(true);
     try {
       const token = localStorage.getItem('evaluatorToken');
-      const response = await axios.get('http://localhost:11129/api/evaluator/assigned-projects', {
+      const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/evaluator/assigned-projects', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -189,7 +191,8 @@ export default function EvaluatorDashboard() {
     setIsLoading(true);
     try {
       const token = localStorage.getItem('evaluatorToken');
-      const response = await axios.get('http://localhost:11129/api/evaluator/level-1-list', {
+      const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/evaluator/level-1-list', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -207,7 +210,8 @@ export default function EvaluatorDashboard() {
   const fetchL2Projects = async () => {
     try {
       const token = localStorage.getItem('evaluatorToken');
-      const res = await axios.get("http://localhost:11129/api/evaluator/projects-to-evaluate", {
+      const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com
+/api/evaluator/projects-to-evaluate", {
         headers: { Authorization: `Bearer ${token}` },
         params: { evaluatorName: username }  // <-- IMPORTANT
       });
@@ -222,7 +226,8 @@ export default function EvaluatorDashboard() {
   const fetchL2ProjectsList = async () => {
     try {
       const token = localStorage.getItem('evaluatorToken');
-      const res = await axios.get("http://localhost:11129/api/evaluator/level-2-list", {
+      const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com
+/api/evaluator/level-2-list", {
         headers: { Authorization: `Bearer ${token}` }
       });
 

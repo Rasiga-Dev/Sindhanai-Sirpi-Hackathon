@@ -11,7 +11,8 @@
 // // //   useEffect(() => {
 // // //     const fetchEvaluators = async () => {
 // // //       try {
-// // //         const res = await axios.get("http://localhost:11129/api/admin/get-all-evaluators");
+// // //         const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/get-all-evaluators");
 // // //         setEvaluators(res.data);
 // // //       } catch (err) {
 // // //         console.error("Error fetching evaluators:", err);
@@ -24,7 +25,8 @@
 // // //     setSelectedEvaluator(evaluator);
 // // //     try {
 // // //       const res = await axios.get(
-// // //         `http://localhost:11129/api/admin/${evaluator.username}/projects`
+// // //         `https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/${evaluator.username}/projects`
 // // //       );
 // // //       setAssignedProjects(res.data.assignedProjects);
 // // //       setEvaluatedProjects(res.data.evaluatedProjects);
@@ -160,7 +162,8 @@
 // //   useEffect(() => {
 // //     const fetchEvaluators = async () => {
 // //       try {
-// //         const res = await axios.get("http://localhost:11129/api/admin/get-all-evaluators");
+// //         const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/get-all-evaluators");
 // //         setEvaluators(res.data);
 // //       } catch (err) {
 // //         console.error("Error fetching evaluators:", err);
@@ -174,7 +177,8 @@
 // //     setOpen(true); // ✅ open modal
 // //     try {
 // //       const res = await axios.get(
-// //         `http://localhost:11129/api/admin/${evaluator.username}/projects`
+// //         `https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/${evaluator.username}/projects`
 // //       );
 // //       setAssignedProjects(res.data.assignedProjects);
 // //       setEvaluatedProjects(res.data.evaluatedProjects);
@@ -311,7 +315,8 @@
 //   useEffect(() => {
 //     const fetchEvaluators = async () => {
 //       try {
-//         const res = await axios.get("http://localhost:11129/api/admin/get-all-evaluators");
+//         const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/get-all-evaluators");
 //         setEvaluators(res.data);
 //       } catch (err) {
 //         console.error("Error fetching evaluators:", err);
@@ -325,7 +330,8 @@
 //     setOpen(true); // ✅ open modal
 //     try {
 //       const res = await axios.get(
-//         `http://localhost:11129/api/admin/${evaluator.username}/projects`
+//         `https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/${evaluator.username}/projects`
 //       );
 //       setAssignedProjects(res.data.assignedProjects);
 //       setEvaluatedProjects(res.data.evaluatedProjects);
@@ -474,7 +480,8 @@ const EvaluatorManagement = () => {
   useEffect(() => {
     const fetchEvaluators = async () => {
       try {
-        const res = await axios.get("http://localhost:11129/api/admin/get-all-evaluators");
+        const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/get-all-evaluators");
         setEvaluators(res.data);
       } catch (err) {
         console.error("Error fetching evaluators:", err);
@@ -488,7 +495,8 @@ const EvaluatorManagement = () => {
     setOpen(true); // ✅ open modal
     try {
       const res = await axios.get(
-        `http://localhost:11129/api/admin/${evaluator.username}/projects`
+        `https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/${evaluator.username}/projects`
       );
       setAssignedProjects(res.data.assignedProjects);
       setEvaluatedProjects(res.data.evaluatedProjects);

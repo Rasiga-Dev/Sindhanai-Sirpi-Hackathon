@@ -24,7 +24,8 @@
 //     setLoading(true);
 //     setError(null);
 
-//     fetch('http://localhost:11129/api/admin/dashboard-stats')
+//     fetch('https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/dashboard-stats')
 //       .then(async (res) => {
 //         if (!res.ok) {
 //           const errorData = await res.json();
@@ -176,7 +177,8 @@ const DashboardHome = () => {
     setLoading(true);
     setError(null);
 
-    fetch('http://localhost:11129/api/admin/dashboard-stats')
+    fetch('https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/dashboard-stats')
       .then(async (res) => {
         if (!res.ok) {
           const errorData = await res.json();

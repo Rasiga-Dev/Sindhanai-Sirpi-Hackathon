@@ -11,7 +11,8 @@
 // //   useEffect(() => {
 // //     if (district) {
 // //       axios
-// //         .get(`http://localhost:11129/api/dpm/by-district/${district}`)
+// //         .get(`https://sindhanai-sirpi-hackathon.onrender.com
+/api/dpm/by-district/${district}`)
 // //         .then((res) => {
 // //           setEvaluators(res.data);
 // //         });
@@ -75,7 +76,8 @@
 //   useEffect(() => {
 //     if (district && activeTab === 'evaluator') {
 //       axios
-//         .get(`http://localhost:11129/api/dpm/by-district/${district}`)
+//         .get(`https://sindhanai-sirpi-hackathon.onrender.com
+/api/dpm/by-district/${district}`)
 //         .then((res) => {
 //           setEvaluators(res.data);
 //         });
@@ -172,7 +174,8 @@ const DPMPannel = () => {
 
   useEffect(() => {
     if (district && activeTab === 'school') {
-      axios.get(`http://localhost:11129/api/dpm/schools/by-district/${district}`)
+      axios.get(`https://sindhanai-sirpi-hackathon.onrender.com
+/api/dpm/schools/by-district/${district}`)
         .then((res) => {
           setSchools(res.data);
         })
@@ -183,7 +186,8 @@ const DPMPannel = () => {
 
 
     if (district && activeTab === 'evaluator') {
-      axios.get(`http://localhost:11129/api/dpm/by-district/${district}`)
+      axios.get(`https://sindhanai-sirpi-hackathon.onrender.com
+/api/dpm/by-district/${district}`)
         .then((res) => setEvaluators(res.data));
     }
   }, [district, activeTab]);

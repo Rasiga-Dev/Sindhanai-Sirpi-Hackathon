@@ -181,7 +181,8 @@ export function Speakers() {
   useEffect(() => {
     const fetchWinners = async () => {
       try {
-        const res = await axios.get("http://localhost:11129/api/schools/winners");
+        const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com
+/api/schools/winners");
         setWinners(res.data);
       } catch (err) {
         console.error("Error fetching winners:", err);

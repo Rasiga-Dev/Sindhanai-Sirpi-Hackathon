@@ -6,7 +6,8 @@
 // // // // //   const [today, setToday] = useState({});
 
 // // // // //   useEffect(() => {
-// // // // //     axios.get('http://localhost:11129/api/admin/getDailyTracking')
+// // // // //     axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/getDailyTracking')
 // // // // //       .then(res => {
 // // // // //         setData(res.data.allDates);
 // // // // //         setToday(res.data.today);
@@ -65,7 +66,8 @@
 
 // // // //   const fetchByDate = (date) => {
 // // // //     const formattedDate = date.toISOString().split('T')[0]; // YYYY-MM-DD
-// // // //     axios.get(`http://localhost:11129/api/admin/getTrackingByDate?date=${formattedDate}`)
+// // // //     axios.get(`https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/getTrackingByDate?date=${formattedDate}`)
 // // // //       .then(res => {
 // // // //         setDailyData(res.data);
 // // // //       })
@@ -122,7 +124,8 @@
 // // //     setLoading(true);
 
 // // //     try {
-// // //       const res = await axios.get(`http://localhost:11129/api/admin/getTrackingByDate?date=${formattedDate}`);
+// // //       const res = await axios.get(`https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/getTrackingByDate?date=${formattedDate}`);
 // // //       setDailyData(res.data);
 // // //     } catch (err) {
 // // //       console.error(err);
@@ -208,7 +211,8 @@
 // //     const formattedDate = date.toISOString().split('T')[0];
 // //     setLoading(true);
 // //     try {
-// //       const res = await axios.get(`http://localhost:11129/api/admin/getTrackingByDate?date=${formattedDate}`);
+// //       const res = await axios.get(`https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/getTrackingByDate?date=${formattedDate}`);
 // //       setDailyData(res.data);
 // //     } catch (err) {
 // //       console.error(err);
@@ -303,7 +307,8 @@
 //     const formattedDate = date.toISOString().split('T')[0];
 //     setLoading(true);
 //     try {
-//       const res = await axios.get(`http://localhost:11129/api/admin/getTrackingByDate?date=${formattedDate}`);
+//       const res = await axios.get(`https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/getTrackingByDate?date=${formattedDate}`);
 //       setDailyData(res.data);
 //     } catch (err) {
 //       console.error(err);
@@ -436,7 +441,8 @@ const DailyProjectTracking = () => {
 
     const fetchData = async () => {
         try {
-            const res = await axios.get("http://localhost:11129/api/admin/getTrackingByDate"); // adjust URL
+            const res = await axios.get("https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/getTrackingByDate"); // adjust URL
             setProjects(res.data);
         } catch (err) {
             console.error("Failed to fetch projects", err);
@@ -456,7 +462,8 @@ const DailyProjectTracking = () => {
         const clickedDate = moment(slotInfo.start).format("YYYY-MM-DD");
         try {
             const res = await axios.get(
-                `http://localhost:11129/api/admin/getTrackingByDate?date=${clickedDate}`
+                `https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/getTrackingByDate?date=${clickedDate}`
             );
 
             const districtsData = res.data.districts;

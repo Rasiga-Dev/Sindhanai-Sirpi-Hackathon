@@ -18,7 +18,8 @@
 //     setError('');
   
 //     try {
-//       const response = await axios.post('http://localhost:11129/api/admin/login', credentials);
+//       const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/login', credentials);
 //       const token = response.data.token;
       
 //       localStorage.setItem('adminToken', token);
@@ -128,7 +129,8 @@ export default function AdminLogin() {
     setIsLoading(true);
     setError('');
     try {
-      const response = await axios.post('http://localhost:11129/api/admin/login', credentials);
+      const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com
+/api/admin/login', credentials);
       localStorage.setItem('adminToken', response.data.token);
       navigate('/admin-dashboard');
     } catch (err: any) {

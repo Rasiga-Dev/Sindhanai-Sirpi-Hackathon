@@ -89,7 +89,8 @@ export default function SchoolDashboard() {
     // Fetch the dashboard data
     const fetchDashboardData = async () => {
       try {
-        const response = await axios.get('http://localhost:11129/api/schools/dashboard', {
+        const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
+/api/schools/dashboard', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setDashboardData(response.data);
