@@ -11,8 +11,7 @@ const ProjectList = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
-/api/admin/project-list');
+      const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com/api/admin/project-list');
       setProjects(response.data);
     } catch (error) {
       console.error('Error fetching project list:', error);

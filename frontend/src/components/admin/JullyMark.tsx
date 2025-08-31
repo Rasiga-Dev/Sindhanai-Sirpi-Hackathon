@@ -20,8 +20,7 @@ const JullyMark = () => {
 
     useEffect(() => {
         // 1st API Call: jully-marks
-        axios.get('https://sindhanai-sirpi-hackathon.onrender.com
-/api/admin/jully-marks')
+        axios.get('https://sindhanai-sirpi-hackathon.onrender.com/api/admin/jully-marks')
             .then((res) => {
                 const fetched = res.data;
                 const saved = {};
@@ -48,12 +47,10 @@ const JullyMark = () => {
 
         // 2nd API Call: latest-pdf
         axios
-            .get('https://sindhanai-sirpi-hackathon.onrender.com
-/api/jully/latest')
+            .get('https://sindhanai-sirpi-hackathon.onrender.com/api/jully/latest')
             .then((res) => {
                 if (res.data) {
-                    setPdfURL(`https://sindhanai-sirpi-hackathon.onrender.com
-/api/jully/pdf/${res.data.filename}`);
+                    setPdfURL(`https://sindhanai-sirpi-hackathon.onrender.com/api/jully/pdf/${res.data.filename}`);
                     setPdfName(res.data.originalName);
                     setIsUploaded(true);
                 }
@@ -146,8 +143,7 @@ const handleExportPDF = () => {
         };
 
         try {
-            await axios.post('https://sindhanai-sirpi-hackathon.onrender.com
-/api/admin/jully-marks/save', payload);
+            await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/admin/jully-marks/save', payload);
 
             setProjects((prev) => prev.filter(p => p.submissionId !== item.submissionId));
             setAllProjects((prev) => prev.filter(p => p.submissionId !== item.submissionId));
@@ -176,16 +172,14 @@ const handleExportPDF = () => {
         formData.append('pdf', file);
 
         try {
-            const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com
-/api/jully/upload', formData, {
+            const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/jully/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
 
             const uploadedFilename = response.data.data.filename;
-            const previewURL = `https://sindhanai-sirpi-hackathon.onrender.com
-/api/jully/pdf/${uploadedFilename}`;
+            const previewURL = `https://sindhanai-sirpi-hackathon.onrender.com/api/jully/pdf/${uploadedFilename}`;
             setPdfURL(previewURL); // ✅ Set the preview URL
 
             alert('Upload successful!');

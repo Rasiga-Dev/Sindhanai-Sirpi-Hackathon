@@ -15,7 +15,7 @@ import html2pdf from 'html2pdf.js';
 import BankAccountDetails from './admin/BankAccountDetails';
 
 
-// import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+
 
 
 interface SchoolDetails {
@@ -89,8 +89,7 @@ export default function SchoolDashboard() {
     // Fetch the dashboard data
     const fetchDashboardData = async () => {
       try {
-        const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com
-/api/schools/dashboard', {
+        const response = await axios.get('https://sindhanai-sirpi-hackathon.onrender.com/api/schools/dashboard', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setDashboardData(response.data);

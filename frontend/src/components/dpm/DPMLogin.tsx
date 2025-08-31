@@ -1,47 +1,4 @@
-// // DPMLogin.tsx
-// import React, { useState } from 'react';
-// import axios from 'axios';
-// import { useNavigate } from 'react-router-dom';
-// import { toast,ToastContainer } from 'react-toastify';
 
-
-// const DPMLogin = () => {
-//   const [username, setUsername] = useState('');
-//   const [password, setPassword] = useState('');
-//   const navigate = useNavigate();
-
-//  const handleLogin = async (e: React.FormEvent) => {
-//   e.preventDefault(); // 🚨 This is very important
-
-//   try {
-//     const res = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com
-/api/dpm/login', {
-//       username,
-//       password,
-//     });
-
-//     localStorage.setItem("dpmDistrict", res.data.district);
-//     localStorage.setItem("dpmUsername", res.data.username);
-//     navigate('/dpm-dashboard'); // 🚀 Navigate to panel
-//   } catch (err) {
-//     toast.error(err.response?.data?.message || 'Login failed');
-//   }
-// };
-
-
-
-//   return (
-//     <form onSubmit={handleLogin}>
-//       <input placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-//       <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-//       <button type="submit">Login</button>
-//       <ToastContainer />
-
-//     </form>
-//   );
-// };
-
-// export default DPMLogin;
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -57,8 +14,7 @@ const DPMLogin = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com
-/api/dpm/login', {
+      const res = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/dpm/login', {
         username,
         password,
       });

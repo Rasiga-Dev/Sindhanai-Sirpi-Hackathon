@@ -20,8 +20,7 @@ export function VerifyOTP() {
     setError('');
 
     try {
-      const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com
-/api/auth/verify-otp', {
+      const response = await axios.post('https://sindhanai-sirpi-hackathon.onrender.com/api/auth/verify-otp', {
         email,
         otp,
       });
